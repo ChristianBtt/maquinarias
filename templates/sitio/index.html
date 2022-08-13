@@ -1,0 +1,303 @@
+{% include 'sitio/header.html' %}
+
+<ul class="nav nav-tabs" id="myTab" role="tablist" style="background-color:white; color:black">
+    <li class="nav-item" role="presentation">
+        <button class="btn" id="picaroca-tab" data-bs-toggle="tab" data-bs-target="#picaroca" type="button" role="tab" aria-controls="picaroca" aria-selected="true">Pica Roca</button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <button class="btn" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Otra</button>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active" id="picaroca" role="tabpanel" aria-labelledby="picaroca-tab">
+           <form action="/picaroca/save" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="position-absolute">
+                            <div class="position-relative top-0 start-50"><strong>Cilindro Hoist</strong></div>
+                        </div>
+
+                        <div class="container" style="margin-top:50px;">
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Presión Mínima</label>
+                                <input type="number" class="form-control" id="ch01" name="ch01" style="width:100px" placeholder="PSI">
+                            </div>
+                            
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Presión Máxima</label>
+                                <input type="number" class="form-control" id="ch02" name="ch02" style="width:100px" placeholder="PSI">
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Sello Inferior</label>                                
+                                <select class="form-select" id="ch03" name="ch03" style="width:150px">
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Sello Superior</label>
+                                <select class="form-select" id="ch04" name="ch04" style="width:150px">
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Sellos Cámara</label>
+
+                                <select class="form-select" id="ch05" name="ch05" style="width:150px">
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">T°</label>
+                                <input type="number" class="form-control" id="ch06" name="ch06" style="width:100px" placeholder="C°">
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Estructura</label>
+                                <select class="form-select" id="ch07" name="ch07" style="width:150px">
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="position-absolute">
+                            <div class="position-relative top-0 start-50"><strong>Cilindro Dipper</strong></div>
+                        </div>
+                        <div class="container" style="margin-top:50px;">
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Presión Mínima</label>
+                                <input type="number" class="form-control" id="cd01" name="cd01" style="width:100px" placeholder="PSI">
+                            </div>
+                            
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Presión Máxima</label>
+                                <input type="number" class="form-control" id="cd02" name="cd02" style="width:100px" placeholder="PSI">
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Sello Inferior</label>
+                                <select class="form-select" id="cd03" name="cd03" style="width:150px">
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Sello Superior</label>
+                                <select class="form-select" id="cd04" name="cd04" style="width:150px">
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Sellos Cámara</label>
+                                <select class="form-select" id="cd05" name="cd05" style="width:150px">
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">T°</label>
+                                <input type="number" class="form-control" id="cd06" name="cd06" style="width:100px" placeholder="C°">
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Estructura</label>
+                                <select class="form-select" id="cd07" name="cd07" style="width:150px">                                    
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+
+                        <div class="position-absolute">
+                            <div class="position-relative top-0 start-50"><strong>Cilindro Tilt</strong></div>
+                        </div>
+                        <div class="container" style="margin-top:50px;">
+
+                            
+                        <div class="container" style="margin-top:50px;">
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Presión Mínima</label>
+                                <input type="number" class="form-control" id="ct01" name="ct01" style="width:100px" placeholder="PSI">
+                            </div>
+                            
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Presión Máxima</label>
+                                <input type="number" class="form-control" id="ct02" name="ct02" style="width:100px" placeholder="PSI">
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Sello Inferior</label>
+                                <select class="form-select" id="ct03" name="ct03" style="width:150px">
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Sello Superior</label>                                
+                                <select class="form-select" id="ct04" name="ct04" style="width:150px">
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Sellos Cámara</label>
+                                <select class="form-select" id="ct05" name="ct05" style="width:150px">
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">T°</label>
+                                <input type="number" class="form-control" id="ct06" name="ct06" style="width:100px" placeholder="C°">
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <label style="width: 130px;">Estructura</label>
+                                <select class="form-select" id="ct07" name="ct07" style="width:150px">
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3">
+                        <div class="position-absolute" style="margin-top:50px">
+                            <div class="position-relative top-0 start-50"><strong>Pasadores Hoist</strong></div>
+                        </div>
+                        <div class="container" style="margin-top:100px">
+                            <div class="d-flex justify-content-start">
+                                <select class="form-select" id="ecph" name="ecph" style="width:150px">
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+                            <textarea name="obph" style="width:80%; height:100px; margin-top:20px" placeholder="Observación"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="position-absolute" style="margin-top:50px">
+                            <div class="position-relative top-0 start-50"><strong>Pasadores Dipper</strong></div>
+                        </div>
+                        <div class="container" style="margin-top:100px">
+                            <div class="d-flex justify-content-start">
+                                <select class="form-select" id="ecpd" name="ecpd" style="width:150px">
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+                            <textarea name="obpd" style="width:80%; height:100px; margin-top:20px" placeholder="Observación"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="position-absolute" style="margin-top:50px">
+                            <div class="position-relative top-0 start-50"><strong>Brazo Inner</strong></div>
+                        </div>
+                        <div class="container" style="margin-top:100px">
+                            <div class="d-flex justify-content-start">
+                                <select class="form-select" id="ecbi" name="ecbi" style="width:150px">
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+                            <textarea name="obbi" style="width:80%; height:100px; margin-top:20px" placeholder="Observación"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="position-absolute" style="margin-top:50px">
+                            <div class="position-relative top-0 start-50"><strong>Brazo Outer</strong></div>
+                        </div>
+                        <div class="container" style="margin-top:100px">
+                            <div class="d-flex justify-content-start">
+                                <select class="form-select" id="ecbo" name="ecbo" style="width:150px">
+                                    <option>Seleccionar</option>
+                                    <option value="Bueno">Bueno</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Malo">Malo</option>
+                                </select>
+                            </div>
+                            <textarea name="obbo" style="width:80%; height:100px; margin-top:20px" placeholder="Observación"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="container-fluid position-relative" style="margin-top:50px">
+                    <div class="position-absolute start-50 translate-middle">
+                        <button type="submit" class="btn btn-success" style="width:500px">Enviar</button>
+                    </div>
+                </div>
+                <div class="container-fluid" style="margin-top:50px; height:1px; background-color:darkgray">
+
+                </div>
+            </form>
+
+            <form action="/obspicaroca/save" method="post" enctype="multipart/form-data"></form>
+                <div class="row">
+                    
+                </div>
+
+           </form>
+    </div>
+
+    <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+    </div>
+</div>
+{% include 'sitio/footer.html' %}

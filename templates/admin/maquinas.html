@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Pagina</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="container d-flex justify-content-between">
+        <form action="/admin/picaroca" method="POST">
+            <div class="d-flex">
+                <select class="form-select" aria-label="Default select example" id="inputid" name="inputid">
+                    {% for maquina in maquinas %}
+                    <option value="{{maquina[0]}}">{{maquina[0]}}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="btn btn-primary">Consultar Registro</button>
+            </div>
+        </form>
+        <form action="/admin/cerrar" method="POST">
+            <button type="sumbit" class="btn btn-danger">Cerrar</button>
+        </form>
+    </div>
+
+
+   

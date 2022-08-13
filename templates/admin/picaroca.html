@@ -1,0 +1,297 @@
+{% include 'admin/maquinas.html' %}
+
+{%for picaroca in picarocas%}
+<div style="height:10px"></div>
+<div class="row">
+    <div class="col-4">
+        <ol class="list-group list-group-numbered">
+            <label><h2>Cilindro Hoist</h2></label>
+            <li class="list-group-item d-flex ">
+                <h5  class="me-auto" style="margin-left:10px"><strong>Presión Mínima</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px" name="01">{{picaroca[1]}}</span>
+                <small class="text-muted">psi</small>
+            </li>
+        
+            <li class="list-group-item d-flex ">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Presión Máxima</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[2]}}</span>
+                <small class="text-muted">psi</small>
+            </li>
+        
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Sello Inferior</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[3]}}</span>
+            </li>
+        
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Sello Superior</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[4]}}</span>
+            </li>
+        
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Sellos Cámara</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[5]}}</span>
+            </li>
+        
+            <li class="list-group-item d-flex ">
+                <h5  class="me-auto" style="margin-left:10px"><strong>Temperatura</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[6]}}</span>
+                <small class="text-muted">c°</small>
+            </li>
+        
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Estructura</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[7]}}</span>
+            </li>
+        </ol>        
+    </div>
+    <div class="col-4">
+        <ol class="list-group list-group-numbered">
+            <label><h2>Cilindro Dipper</h2></label>
+
+            <li class="list-group-item d-flex ">
+                <h5  class="me-auto" style="margin-left:10px"><strong>Presión Mínima</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[8]}}</span>
+                <small class="text-muted">psi</small>
+            </li>
+
+            <li class="list-group-item d-flex ">
+                <h5  class="me-auto" style="margin-left:10px"><strong>Presión Máxima</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[9]}}</span>
+                <small class="text-muted">psi</small>
+            </li>
+
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Sello Inferior</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[10]}}</span>
+            </li>
+
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Sello Superior</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[11]}}</span>
+            </li>
+
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Sellos Cámara</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[12]}}</span>
+            </li>
+
+            <li class="list-group-item d-flex ">
+                <h5  class="me-auto" style="margin-left:10px"><strong>Temperatura</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[13]}}</span>
+                <small class="text-muted">c°</small>
+            </li>
+
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Estructura</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[14]}}</span>
+            </li>
+        </ol>        
+    </div>
+    <div class="col-4">
+        <ol class="list-group list-group-numbered">
+            <label><h2>Cilindro Tilt</h2></label>
+
+            <li class="list-group-item d-flex ">
+                <h5  class="me-auto" style="margin-left:10px"><strong>Presión Mínima</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[15]}}</span>
+                <small class="text-muted">psi</small>
+            </li>
+
+            <li class="list-group-item d-flex ">
+                <h5  class="me-auto" style="margin-left:10px"><strong>Presión Máxima</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[16]}}</span>
+                <small class="text-muted">psi</small>
+            </li>
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Sello Inferior</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[17]}}</span>
+            </li>
+
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Sello Superior</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[18]}}</span>
+            </li>
+
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Sellos Cámara</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[19]}}</span>
+            </li>
+
+            <li class="list-group-item d-flex ">
+                <h5  class="me-auto" style="margin-left:10px"><strong>Temperatura</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[20]}}</span>
+                <small class="text-muted">c°</small>
+            </li>
+
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Estructura</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[21]}}</span>
+            </li>     
+        </ol>        
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <ol class="list-group list-group border">
+            <label><h2>Pasadores Hoist</h2></label>
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Estado</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[22]}}</span>
+            </li>
+            <div>{{picaroca[26]}}</div>
+        </ol>
+    </div>
+    <div class="col-3">
+        <ol class="list-group list-group border">
+            <label><h2>Pasadores Dipper</h2></label>
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Estado</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[23]}}</span>
+            </li>
+            <div>{{picaroca[27]}}</div>
+        </ol>
+    </div>
+    <div class="col-3">
+        <ol class="list-group list-group border">
+            <label><h2>Brazo Inner</h2></label>
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Estado</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[24]}}</span>
+            </li>
+            <div>{{picaroca[28]}}</div>
+        </ol>
+    </div>
+    <div class="col-3">
+        <ol class="list-group list-group border">
+            <label><h2>Brazo Outer</h2></label>
+            <li class="list-group-item d-flex">
+                <h5 class="me-auto" style="margin-left:10px"><strong>Estado</strong></h5>
+                <span class="badge bg-primary" style="font-size:25px; margin-left:50px">{{picaroca[25]}}</span>
+            </li>
+            <div>{{picaroca[29]}}</div>
+        </ol>
+    </div>
+</div>
+    
+<div class="position-absolute border" style="width:50%;">
+    
+    <canvas id="myChart" width="400" height="300"></canvas>
+    <script>
+    const ctx = document.getElementById('myChart');
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Presión Mínima(psi)', 'Presión Máxima(psi)', 'Temperatura(c°)'],
+            datasets: [{
+                label: 'Cilindro Hoist',
+                data: ['{{picaroca[1]}}','{{picaroca[2]}}', '{{picaroca[6]}}'],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1},
+            {
+                label: 'Cilindro Dipper',
+                data: ['{{picaroca[8]}}','{{picaroca[9]}}', '{{picaroca[13]}}'],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1},
+
+            {
+                label: 'Cilindro Tilt',
+                data: ['{{picaroca[15]}}','{{picaroca[16]}}', '{{picaroca[20]}}'],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+                
+            
+            },
+            {    
+                label: 'Correcto',
+                data: [3,3,3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+                
+            }],
+            
+        },
+        
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    </script>
+    {%endfor%}
+</div>
+<div class="position-absolute end-0" style="width:50%;">
+    <img src="/static/images/Imagen1.jpg" alt="" width="430px" height="613px" style="margin-left:25%; margin-top:30px;">
+</div>
+
+ <!-- Bootstrap JavaScript Libraries -->
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+</body>
+  
+</html>
