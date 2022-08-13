@@ -9,15 +9,15 @@ import matplotlib.pyplot as plt
 app=Flask(__name__)
 app.secret_key="xd"
 mysql=MySQL()
-app.config['MYSQL_DATABASE_HOST']='localhost'
-app.config['MYSQL_DATABASE_USER']='root'
-app.config['MYSQL_DATABASE_PASSWORD']='stylver2802X'
-app.config['MYSQL_DATABASE_DB']='maquinarias'
+app.config['MYSQL_DATABASE_HOST']='us-cdbr-east-06.cleardb.net'
+app.config['MYSQL_DATABASE_USER']='b34ca6fc10f640'
+app.config['MYSQL_DATABASE_PASSWORD']='a110de41'
+app.config['MYSQL_DATABASE_DB']='heroku_99fada5765fea09'
 mysql.init_app(app)
 
 @app.route('/')
 def inicio():
-    return render_template('sitio/index.html')
+    return render_template('index.html')
 
 @app.route('/picaroca/save', methods=['POST'])
 def picaroca_save():
@@ -58,12 +58,12 @@ def picaroca_save():
     horaActual=tiempo.strftime('%Y%m%d')
     conexion = mysql.connect()
     cursor = conexion.cursor()
-    cursor.execute("SELECT idpicaroca FROM `maquinarias`.`picaroca` WHERE idpicaroca = %s",(horaActual))
+    cursor.execute("SELECT idpicaroca FROM `heroku_99fada5765fea09`.`picaroca` WHERE idpicaroca = %s",(horaActual))
     conexion.commit()
 
     
 
-    sql="INSERT INTO `maquinarias`.`picaroca` (`idpicaroca`, `ch01`, `ch02`, `ch03`, `ch04`, `ch05`, `ch06`, `ch07`, `cd01`, `cd02`, `cd03`, `cd04`, `cd05`, `cd06`, `cd07`, `ct01`, `ct02`, `ct03`, `ct04`, `ct05`, `ct06`, `ct07`, `ecph`, `ecpd`, `ecbi`, `ecbo`, `obph`, `obpd`, `obbi`, `obbo`) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+    sql="INSERT INTO `heroku_99fada5765fea09`.`picaroca` (`idpicaroca`, `ch01`, `ch02`, `ch03`, `ch04`, `ch05`, `ch06`, `ch07`, `cd01`, `cd02`, `cd03`, `cd04`, `cd05`, `cd06`, `cd07`, `ct01`, `ct02`, `ct03`, `ct04`, `ct05`, `ct06`, `ct07`, `ecph`, `ecpd`, `ecbi`, `ecbo`, `obph`, `obpd`, `obbi`, `obbo`) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
     datos=(horaActual, _ch01, _ch02, _ch03, _ch04, _ch05, _ch06, _ch07, _cd01, _cd02, _cd03, _cd04, _cd05, _cd06, _cd07, _ct01, _ct02, _ct03, _ct04, _ct05, _ct06, _ct07, _ecph, _ecpd, _ecbi, _ecbo, _obph, _obpd, _obbi, _obbo)
     conexion = mysql.connect()
     cursor = conexion.cursor()
@@ -76,7 +76,7 @@ def picaroca_save():
 
 @app.route('/admin/login')
 def admin_login():
-    return render_template('admin/login.html')
+    return render_template('login.html')
 
 
 @app.route('/admin/login', methods=['POST'])
@@ -102,10 +102,10 @@ def admin_maquinas():
         return redirect('/admin/login')
     conexion1 = mysql.connect()
     cursor1 = conexion1.cursor()
-    cursor1.execute("SELECT idpicaroca FROM `maquinarias`.`picaroca`")
+    cursor1.execute("SELECT idpicaroca FROM `heroku_99fada5765fea09`.`picaroca`")
     maquinas = cursor1.fetchall()
     conexion1.commit()
-    return render_template('admin/maquinas.html', maquinas=maquinas)
+    return render_template('maquinas.html', maquinas=maquinas)
 
 
 @app.route('/admin/picaroca', methods=['POST'])
@@ -114,7 +114,7 @@ def admin_picarocas():
         return redirect('/admin/login')
     conexion1 = mysql.connect()
     cursor1 = conexion1.cursor()
-    cursor1.execute("SELECT idpicaroca FROM `maquinarias`.`picaroca`")
+    cursor1.execute("SELECT idpicaroca FROM `heroku_99fada5765fea09`.`picaroca`")
     maquinas = cursor1.fetchall()
     conexion1.commit()
     
@@ -123,7 +123,7 @@ def admin_picarocas():
     cursor.execute("SELECT * FROM `maquinarias`.`picaroca` WHERE idpicaroca = %s",(request.form['inputid']))
     picarocas = cursor.fetchall()
     conexion.commit()
-    return render_template('admin/picaroca.html', picarocas=picarocas, maquinas=maquinas)
+    return render_template('picaroca.html', picarocas=picarocas, maquinas=maquinas)
 
 
 
